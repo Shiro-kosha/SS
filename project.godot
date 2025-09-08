@@ -8,10 +8,20 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Control",
+"class": "Main",
+"language": "GDScript",
+"path": "res://main_page/main.gd"
+} ]
+_global_script_class_icons={
+"Main": ""
+}
+
 [application]
 
 config/name="Ss"
-run/main_scene="res://main.tscn"
+run/main_scene="res://main_page/main.tscn"
 config/icon="res://icon.png"
 
 [display]
