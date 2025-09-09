@@ -1,0 +1,100 @@
+{
+  "char": {
+    "rethink": {
+      "name": "-",
+      "surname": "-",
+      "nickname": "Re-k",
+      "age": "No data\\n~100",
+      "race_species": "Human / cyborg",
+      "fraction": "IKI-G clan",
+      "role_in_the_clan": "Head_of_the_clan"
+    },
+    "way": {
+      "name": "-",
+      "surname": "-",
+      "nickname": "Wei Shi Mo",
+      "age": "No data\\n~24",
+      "race_species": "Human / cyborg",
+      "fraction": "IKI-G clan"
+    },
+    "black_stream": {
+      "name": "-",
+      "surname": "-",
+      "nickname": "Kuroé Rei En",
+      "age": "No data\\n~25",
+      "race_species": "Wei's inner voice",
+      "fraction": "IKI-G clan"
+    },
+    "shift_k": {
+      "name": "Kaito",
+      "race_species": "Human / cyborg",
+      "fraction": "IKI-G clan"
+    },
+    "saros": {
+      "name": "Saree",
+      "age": 21,
+      "race_species": "Human / cyborg",
+      "fraction": "IKI-G clan",
+      "role_in_the_clan": "Engineer"
+    },
+    "crimson": {
+      "name": "Krisma",
+      "age": 25,
+      "race_species": "Human / cyborg",
+      "fraction": "IKI-G clan",
+      "role_in_the_clan": "Medic"
+    },
+    "": {
+      "name": "Dai’sa",
+      "age": "~24",
+      "race_species": "Human / cyborg",
+      "fraction": "No clan"
+    }
+  },
+  "gallery": {
+    "bodyguard 2k": {
+      "clan": "Aeon Strata",
+      "tags": "[\"Syeei\", \"S-Xsan-7\"]"
+    },
+    "Kuroe [c] - 2k": {
+      "clan": "IKI-G clan",
+      "tags": "[\"Kuroe\"]"
+    },
+    "Re-k - dreams (or) 2k": {
+      "clan": "IKI-G clan",
+      "tags": "[\"Re-k\"]"
+    },
+    "Re-k & Wei [bath] - 2k": {
+      "clan": "IKI-G clan",
+      "tags": "[\"Re-k\", \"Wei\"]"
+    },
+    "Re-k [armor] 2k": {
+      "clan": "IKI-G clan",
+      "tags": "[\"Re-k\"]"
+    },
+    "S & S 2k": {
+      "clan": "Aeon Strata",
+      "tags": "[\"Syeei\", \"S-Xsan-7\"]"
+    },
+    "S-Xsan-7 & Syeei 2k": {
+      "clan": "Aeon Strata",
+      "tags": "[\"Syeei\", \"S-Xsan-7\"]"
+    },
+    "Syeei [corporation] - 2k": {
+      "clan": "Aeon Strata",
+      "tags": "[\"Syeei\"]"
+    },
+    "Syeei [hand] 2k": {
+      "clan": "Aeon Strata",
+      "tags": "[\"Syeei\"]"
+    },
+    "Syeei 2k": {
+      "clan": "Aeon Strata",
+      "tags": "[\"Syeei\"]"
+    },
+    "wei & re-k - night 2k": {
+      "clan": "IKI-G clan",
+      "tags": "[\"Re-k\", \"Wei\"]"
+    }
+  }
+}
