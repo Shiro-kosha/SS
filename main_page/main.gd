@@ -7,7 +7,7 @@ enum SECTIONS { MAIN, GALLERY, LORE, ABOUT}
 
 onready var SCENES = {
 	SECTIONS.MAIN : preload("res://main_page/ArtBox.tscn"),
-#	SECTIONS.GALLERY : preload("res://main_page/ArtBox.tscn"),
+	SECTIONS.GALLERY : preload("res://gallery/Gallery.tscn"),
 #	SECTIONS.LORE : preload("res://main_page/ArtBox.tscn"),
 #	SECTIONS.ABOUT : preload("res://main_page/ArtBox.tscn"),
 	}
