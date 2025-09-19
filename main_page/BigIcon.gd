@@ -11,7 +11,7 @@ onready var frame = $"%Frame"
 func _ready():
 	self.set("modulate", UNMARKED)
 
-func _process(delta):
+func _process(_delta):
 	var mat = frame.get("material")
 	if mat and mat is ShaderMaterial:
 		mat.set_shader_param("mouse_pos", get_viewport().get_mouse_position())
