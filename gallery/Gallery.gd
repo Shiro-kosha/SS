@@ -13,7 +13,7 @@ var TEXTURE = {}
 func _ready():
 	pass
 	DB = load_db()
-	$Label.text = str(DB)
+	report(DB)
 	fill()
 
 func load_db():
@@ -21,25 +21,25 @@ func load_db():
 	if f.file_exists("res://data/Replica.json"):
 		var err = f.open("res://data/Replica.json", File.READ)
 		if err != OK:
-			push_error("Failed to open JSON file, code %s" % err)
+			report("Failed to open JSON file, code %s" % err)
 			return {}
 		var text = f.get_as_text()
 		var parsed = JSON.parse(text)
 		if parsed.error != OK:
-			push_error("JSON parse error: %s (line %s)" % [parsed.error_string, parsed.error_line])
+			report("JSON parse error: %s (line %s)" % [parsed.error_string, parsed.error_line])
 			return str("JSON parse error: %s (line %s)" % [parsed.error_string, parsed.error_line])
 		return parsed.result
 	else:
-		push_error("no DataBase found!")
+		report("no DataBase found!")
 		return str("no DataBase found!")
 
 
 func iload(path):
 	var f = File.new()
 	if f.open(str(path, ".import"), File.READ) != OK:
-		push_error("Cannot open file: %s" % path)
+		report("Cannot open file: %s" % path)
 		return null
-	
+	report("opening: %s" % path)
 	var line = ""
 	while not f.eof_reached():
 		line = f.get_line()
@@ -76,3 +76,6 @@ func fill():
 			col.add_child(TR)
 		yield(get_tree().create_timer(0.1), "timeout")
 		return
+
+func report(st):
+	$Label.text = str($Label.text, "\n\n", st)
