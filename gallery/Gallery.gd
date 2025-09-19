@@ -76,7 +76,8 @@ func fill():
 		TR.rect_min_size.y = msy
 		col.add_child(TR)
 		yield(get_tree().create_timer(0.1), "timeout")
-		return
+
 
 func report(st):
-	$Label.text = str($Label.text, "\n\n", st)
+	pass
+#	$Label.text = str($Label.text, "\n\n", st)
