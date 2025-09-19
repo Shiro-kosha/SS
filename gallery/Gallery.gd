@@ -102,3 +102,4 @@ func fill():
 			var msy = (img_size.y * col.rect_size.x) / img_size.x 
 			TR.rect_min_size.y = msy
 			col.add_child(TR)
+		yield(get_tree().create_timer(0.1), "timeout")
