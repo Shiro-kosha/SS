@@ -12,7 +12,7 @@ var TEXTURE = {}
 
 func _ready():
 	pass
-#	DB = load_db()
+	DB = load_db()
 #	fill()
 
 func load_db():

@@ -6,7 +6,7 @@ const UNMARKED = Color(1, 1, 1, 1)
 onready var btns = {
 	$"%HomeBtn": Main.SECTIONS.MAIN,
 	$"%LoreBtn": Main.SECTIONS.LORE,
-	$"%GalleryBtn": Main.SECTIONS.MAIN, 
+	$"%GalleryBtn": Main.SECTIONS.GALLERY, 
 	$"%AboutBtn": Main.SECTIONS.ABOUT,
 }
 
