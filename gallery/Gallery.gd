@@ -12,7 +12,7 @@ var TEXTURE = {}
 
 func _ready():
 	DB = load_db()
-	fill()
+#	fill()
 
 func load_db():
 	var a = File.new()
