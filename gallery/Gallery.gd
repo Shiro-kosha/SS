@@ -94,7 +94,6 @@ func iload(path):
 		return ResourceLoader.load(a)
 
 
-
 func fill():
 	var dir = Directory.new()
 	for i in DB.gallery.keys():
