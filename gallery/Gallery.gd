@@ -27,11 +27,11 @@ func load_db():
 		var parsed = JSON.parse(text)
 		if parsed.error != OK:
 			push_error("JSON parse error: %s (line %s)" % [parsed.error_string, parsed.error_line])
-			return {}
+			return str("JSON parse error: %s (line %s)" % [parsed.error_string, parsed.error_line])
 		return parsed.result
 	else:
 		push_error("no DataBase found!")
-		return {}
+		return str("no DataBase found!")
 
 
 func iload(path):
