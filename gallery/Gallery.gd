@@ -5,6 +5,7 @@ var DB
 onready var col_left = $"%ColLeft"
 onready var col_mid = $"%ColMid"
 onready var col_right = $"%ColRight"
+onready var col_right_2 = $"%ColRight2"
 
 const T_DIR = "res://gallery/arts/"
 var TEXTURE = {}
@@ -67,8 +68,8 @@ func fill():
 		var col = col_right
 		if img_size.x > img_size.y:
 			col = col_mid
-		elif col_left.get_child_count() <= col_right.get_child_count():
-			col = col_left
+		else:
+			col = get_childless_col([col_left, col_right, col_right_2])
 			
 		TR.set("texture", img)
 		TR.set("expand", true)
@@ -77,6 +78,12 @@ func fill():
 		col.add_child(TR)
 		yield(get_tree().create_timer(0.1), "timeout")
 
+func get_childless_col(colls_arr):
+	var childless = col_left
+	for i in colls_arr:
+		if childless.get_child_count() > i.get_child_count():
+			childless = i
+	return childless 
 
 func report(st):
 	pass

@@ -20,24 +20,48 @@ margin_right = 1920.0
 margin_bottom = 9046.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_constants/separation = 20
+
+[node name="spacer2" type="MarginContainer" parent="HBoxContainer"]
+margin_right = 90.0
+margin_bottom = 9046.0
+rect_min_size = Vector2( 90, 0 )
 
 [node name="ColLeft" type="VBoxContainer" parent="HBoxContainer"]
 unique_name_in_owner = true
-margin_right = 478.0
+margin_left = 110.0
+margin_right = 438.0
 margin_bottom = 9046.0
 size_flags_horizontal = 3
+custom_constants/separation = 20
 
 [node name="ColMid" type="VBoxContainer" parent="HBoxContainer"]
 unique_name_in_owner = true
-margin_left = 482.0
-margin_right = 1438.0
+margin_left = 458.0
+margin_right = 1114.0
 margin_bottom = 9046.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
+custom_constants/separation = 20
 
 [node name="ColRight" type="VBoxContainer" parent="HBoxContainer"]
 unique_name_in_owner = true
-margin_left = 1442.0
-margin_right = 1920.0
+margin_left = 1134.0
+margin_right = 1462.0
 margin_bottom = 9046.0
 size_flags_horizontal = 3
+custom_constants/separation = 20
+
+[node name="ColRight2" type="VBoxContainer" parent="HBoxContainer"]
+unique_name_in_owner = true
+margin_left = 1482.0
+margin_right = 1810.0
+margin_bottom = 9046.0
+size_flags_horizontal = 3
+custom_constants/separation = 20
+
+[node name="spacer" type="MarginContainer" parent="HBoxContainer"]
+margin_left = 1830.0
+margin_right = 1920.0
+margin_bottom = 9046.0
+rect_min_size = Vector2( 90, 0 )
