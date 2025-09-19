@@ -6,11 +6,11 @@ const UNMARKED = Color(1, 1, 1, 1)
 onready var btns = {
 	$"%HomeBtn": Main.SECTIONS.MAIN,
 	$"%LoreBtn": Main.SECTIONS.LORE,
-	$"%GalleryBtn": Main.SECTIONS.GALLERY, 
+	$"%GalleryBtn": Main.SECTIONS.MAIN, 
 	$"%AboutBtn": Main.SECTIONS.ABOUT,
 }
 
-func _process(delta):
+func _process(_delta):
 	for i in btn_box.get_children():
 		var mat = i.get("material")
 		if mat and mat is ShaderMaterial:
