@@ -13,6 +13,7 @@ var TEXTURE = {}
 func _ready():
 	pass
 	DB = load_db()
+	$Label.text = str(DB)
 	fill()
 
 func load_db():
