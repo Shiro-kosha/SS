@@ -15,13 +15,21 @@ func _ready():
 #	fill()
 
 func load_db():
-	var a = File.new()
-	if a.file_exists("res://data/Replica.json"):
-		a.open("res://data/Replica.json", File.READ)
-		var db  = JSON.parse(a.get_as_text()).result
-		return db
+	var f = File.new()
+	if f.file_exists("res://data/Replica.json"):
+		var err = f.open("res://data/Replica.json", File.READ)
+		if err != OK:
+			push_error("Failed to open JSON file, code %s" % err)
+			return {}
+		var text = f.get_as_text()
+		var parsed = JSON.parse(text)
+		if parsed.error != OK:
+			push_error("JSON parse error: %s (line %s)" % [parsed.error_string, parsed.error_line])
+			return {}
+		return parsed.result
 	else:
 		push_error("no DataBase found!")
+		return {}
 
 #func load_png(path):
 #	path += ".import"
