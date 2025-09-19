@@ -16,9 +16,12 @@ func _ready():
 
 func load_db():
 	var a = File.new()
-	a.open("res://data/Replica.json", File.READ)
-	var db  = JSON.parse(a.get_as_text()).result
-	return db
+	if a.file_exists("res://data/Replica.json"):
+		a.open("res://data/Replica.json", File.READ)
+		var db  = JSON.parse(a.get_as_text()).result
+		return db
+	else:
+		push_error("no DataBase found!")
 
 #func load_png(path):
 #	path += ".import"
@@ -88,7 +91,7 @@ func fill():
 	for i in DB.gallery.keys():
 		var path = str("res://gallery/arts/", i, ".jpg")
 		if dir.file_exists(path):
-			var img = iload(path)
+			var img = load(path)
 			var img_size = img.get_size()
 			var TR = TextureRect.new()
 			var col = col_right
