@@ -83,15 +83,23 @@ func load_db():
 
 func iload(path):
 	var f = File.new()
-	if f.open(str(path, ".import"), File.READ) == OK:
-		var a 
-		while true:
-			a = f.get_line()
-			if a.begins_with("path"):
-				break
-		for i in ["path=\"", "\""]:
-			a.erase(a.find(i), len(i))
-		return ResourceLoader.load(a)
+	if f.open(str(path, ".import"), File.READ) != OK:
+		push_error("Cannot open file: %s" % path)
+		return null
+	
+	var line = ""
+	while not f.eof_reached():
+		line = f.get_line()
+		if line.begins_with("path"):
+			break
+		else:
+			push_error("No 'path' found in file: %s" % path)
+			return null
+	
+	# Убираем path=" и " с конца
+	line = line.replace("path=\"", "").replace("\"", "")
+	
+	return ResourceLoader.load(line)
 
 
 func fill():
