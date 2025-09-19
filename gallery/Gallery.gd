@@ -13,7 +13,7 @@ var TEXTURE = {}
 func _ready():
 	pass
 	DB = load_db()
-#	fill()
+	fill()
 
 func load_db():
 	var f = File.new()
@@ -99,7 +99,7 @@ func fill():
 	for i in DB.gallery.keys():
 		var path = str("res://gallery/arts/", i, ".jpg")
 		if dir.file_exists(path):
-			var img = load(path)
+			var img = iload(path)
 			var img_size = img.get_size()
 			var TR = TextureRect.new()
 			var col = col_right
