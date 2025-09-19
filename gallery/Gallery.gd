@@ -14,7 +14,7 @@ func _ready():
 	pass
 	DB = load_db()
 	$Label.text = str(DB)
-	fill()
+#	fill()
 
 func load_db():
 	var f = File.new()
